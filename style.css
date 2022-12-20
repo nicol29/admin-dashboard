@@ -50,20 +50,73 @@ li:nth-last-child(3) {
     margin-left: 15px;
 }
 
-img[src*="magnify"] {
+img[src*="magnify"], 
+img[src*="bell"] {
     width: 1.3rem;
     height: auto;
+    position: relative;
+    top: 5px;
+}
+
+.header-section img[src*="blank"] {
+    width: 3rem;
+    height: auto;
+    position: relative;
+    top: 1.25rem;
 }
 
 .header-section {
-    padding: 0px 20px 0px 20px;
+    padding: 0px 30px 0px 30px;
     display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 input {
     border-radius: 20px;
     border: none;
     background-color: #e3e3e3;
-    width: 200px;
-    height: 20px;
+    width: 80%;
+    height: 25px;
+}
+
+.greetings {
+    display: flex;
+}
+
+.greetings img[src*="blank"] {
+    width: 5rem;
+    height: auto;
+    position: relative;
+    top: 0px;
+    margin-right: 20px;
+}
+
+.option-buttons button {
+    background-color: #a78bfa;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 90px;
+    color: white;
+    font-size: .9rem;
+    margin-left: 15px;
+}
+
+.option-buttons {
+    align-self: center;
+    justify-self: end;
+}
+
+.profile-options {
+    justify-self: end;
+}
+
+.profile-options > span,
+.profile-options > img {
+    margin-left: 15px;
+}
+
+.search-bar {
+    align-self: center;
 }
