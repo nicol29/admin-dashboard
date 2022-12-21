@@ -83,7 +83,7 @@ input {
     border: none;
     background-color: #e3e3e3;
     width: 80%;
-    height: 25px;
+    height: 30px;
 }
 
 .greetings {
@@ -135,14 +135,18 @@ input {
 
 .grid-section {
     background-color: #e3e3e3;
-}
-
-.cards-container {
     padding: 20px;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 275px;
+}
+
+.projects-container {
+    display: grid;
+    gap: 20px;
+    grid-column: 1 / 2;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 300px;
+    grid-template-rows: repeat(2, 1fr); */
 }
 
 .card {
@@ -165,4 +169,63 @@ input {
 .bookmark-options {
     align-self: flex-end;
     justify-self: end;
+}
+
+.your-projects {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.announcements,
+.people {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    grid-column: 3 / 4;
+    grid-row-start: 1;
+}
+
+.side-cards:last-child {
+    padding-bottom: 0px;
+}
+
+.people img {
+    width: 3rem;
+    height: auto;
+    position: relative;
+    bottom: 4px;
+}
+
+.people > div {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.ats p {
+    margin-top: 7px;
+    margin-bottom: 30px;
+}
+
+hr {
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+}
+
+.side-cards {
+    grid-column: 2 / 3;
+}
+
+.people > div:last-child p {
+    margin-bottom: 0;
+}
+
+.side-cards > :nth-child(odd) {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.announcements {
+    margin-bottom: 20px;
 }
